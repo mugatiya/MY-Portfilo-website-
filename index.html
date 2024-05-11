@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="mediaquerise.css"/>
 </head>
 <body>
+ <script>
+    document.addEventListener("contextmenu",function(event){
+      event.preventDefault();
+    });
+    document.onkeydown = function(e){
+      if(e.ctrlKey && e.keyCode == 85){
+        alert("Ctrl + U has been disabled ");
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode ==73){
+        alert("Ctrl + shift + I has been disabled");
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode ==74){
+        alert("Ctrl + j has been disabled");
+        return false;
+      }
+    }
+  </script>
+    
+
      <nav id="desktop-nav">
         <div class="logo">Sampath Jayawardene</div>
         <div>
@@ -38,11 +59,13 @@
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-          <img src="./assets/profile-pic.png" alt="sampath jayawardene profile picture">  
+          <img src="./assets/profile-pic.png" alt="sampath jayawardene profile picture" class="profile-pic">  
         </div>
     
             <div class="section__text">
+              
               <p class="section__text__p1">Hello, I'm</p>
+              
               <h1 class="title">Sampath Jayawardene</h1>
               <p class="section__text__p2">Electrtical & Electronic Technologist</p>
               <div class="btn-container">
